@@ -27,7 +27,7 @@ Este projeto foi desenvolvido durante o curso **Java COMPLETO** da Devsuperior c
 src/
  ├── main/
  │    ├── java/
- │    │    └── com.example.project/  
+ │    │    └── com.webproject.course/  
  │    │         ├── resources/       # Controllers (endpoints)
  │    │         ├── services/        # Lógica de negócio
  │    │         ├── repositories/    # Acesso a dados
