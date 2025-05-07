@@ -5,8 +5,10 @@ import java.util.Arrays;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
+import org.springframework.web.filter.CommonsRequestLoggingFilter;
 
 import com.webproject.course.entities.Category;
 import com.webproject.course.entities.Order;
@@ -87,4 +89,15 @@ public class TestConfig implements CommandLineRunner {
 		
 		orderRepository.save(o1);
 	}
+	
+	@Bean
+    public CommonsRequestLoggingFilter requestLoggingFilter() {
+        CommonsRequestLoggingFilter filter = new CommonsRequestLoggingFilter();
+        filter.setIncludeQueryString(true);          // loga ?param=…
+        filter.setIncludePayload(true);              // loga JSON/body
+        filter.setMaxPayloadLength(5000);            // até X caracteres do body
+        filter.setIncludeHeaders(false);             // desativa cabeçalhos (evitar sensível)
+        filter.setAfterMessagePrefix("REQUEST DATA : ");
+        return filter;
+    }
 }

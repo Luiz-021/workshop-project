@@ -69,6 +69,8 @@ A aplicação oferece endpoints REST para:
   Associação de pedidos aos usuários e produtos, com relacionamento entre as entidades e cálculo de subtotais.
 - **Outras Entidades**:
   Gestão de categorias, produtos, pagamentos e associações entre eles.
+ 
+ OBS: O projeto possui um .postman_collection.json com alguns testes de requisições.
 
 ## Tratamento de Exceções
 
