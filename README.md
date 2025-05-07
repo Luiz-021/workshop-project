@@ -77,3 +77,14 @@ A aplicação oferece endpoints REST para:
 A aplicação conta com classes específicas para tratamento de erros, garantindo respostas padronizadas em casos de:
 - Recursos não encontrados (ResourceNotFoundException);
 - Violações de integridade de dados (DatabaseException).
+
+## Swagger / OpenAPI
+
+Neste projeto, é possível acessar o Swagger / OpenAPI seguindo o caminho abaixo, ou apenas requisitar: "http://localhost:8080/v3/api-docs".
+
+└─ src
+   └─ main
+      └─ resources
+         └─ docs
+            └─ api-docs.yaml
+
